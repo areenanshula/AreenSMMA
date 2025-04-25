@@ -1,0 +1,140 @@
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #cecdcd;
+    background: #f0f7fd;
+  }
+
+  .card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-con {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+}
+
+.form-con.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+  /* The hidden overlay */
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  /* Style for the More Details button */
+  .more-details {
+    text-decoration: none;
+    color: white;
+    background: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.4s ease;
+  }
+
+  .more-details:hover {
+    background: #0056b3;
+  }
+
+  /* Show overlay on hover */
+  .card:hover .card-overlay {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+
+/* hover effects */
+.hover-icons, .hover-icons-sm{
+    transition: transform 0.3s ease !important; 
+  }
+.hover-icons-sm:hover {
+    color: black !important;
+}
+.hover-icons a:hover {
+  color: black !important;
+  font-weight: bold !important;
+}
+
+
+/* font-size responsive */
+@media (max-width: 998px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    h5 {
+        font-size: 0.9rem;
+    }
+    h6 {
+        font-size: 0.8rem;
+    }
+}
+.get-start-btn {
+  display: none;
+}
+
+/* Responsive Design */
+
+@media (max-width: 998px) {
+ .navbar {
+    border-radius: 5px !important;
+ }
+}
+
+@media (max-width: 768px) {
+  .get-start-btn {
+    display: block !important;
+  }
+  #get-sm-btn {
+    display: block !important;
+  }
+  .get-start-button, .btn {
+    display: none !important;
+  }
+  .ceo-text {
+    font-size: 0.6rem !important;
+  }
+  .tele-icon {
+    font-size: 1.5rem;
+  }
+  
+}
